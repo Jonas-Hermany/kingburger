@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css?family=Calligraffitti|Open+Sans+Condensed:300,700|Open+Sans:400,800');
+
+$titulo: "Open Sans Condensed", "Open Sans", Tahoma;
+$texto: "Open Sans", Tahoma;
+
+$clara: #ED7801;
+$escura: #762823;
+$branco: #FFFFFF;
+$preto: #000000;
+$bg-footer: #2D2D2D;
+
+p {
+	color: $clara;
+	font: 14px $texto;
+}
+
+h1 {
+	text-align: center;
+	color: $clara;
+	font: 36px $titulo;
+	font-weight: 900;
+}
+
+h2 {
+	color: $escura;
+	font: 24px $titulo;
+}
+
+nav {
+	ul {
+		float: right;
+		margin: 30px 10px;
+
+		li {
+			display: inline;
+
+			a {
+				color: $clara;
+				font: 18px $titulo;
+				font-weight: 700;
+			    text-decoration: none;
+			    transition: all 0.5s;
+			    padding: 10px 20px;
+
+				&:hover {
+					background: $escura;
+				}
+			}
+		}
+	}
+}
+
+header {
+	background-image: url("../images/header.jpg");
+	width: 100%;
+	height: 600px;
+}
+
+body {
+	margin: 0;
+}
+
+h1:after {
+    content: "";
+    border: 5px solid $clara;
+    width: 100px;
+    display: block;
+    margin: 20px auto;
+}
+
+#banner {
+	.banner-msg {
+		float: left;
+	    padding: 20px;
+	    background: rgba(0, 0, 0, 0.3);
+	    width: 500px;
+	    font-family: $texto;
+	    text-align: center;
+	    margin: 80px 0px 0px 50px;
+	    border-radius: 5px;
+	    box-shadow: 1px 1px 5px $preto;
+
+		p {
+		    color: $branco;
+		    font-size: 1.5em;
+		}
+
+		h1 {
+		    color: $escura;
+		    font-size: 3em;
+		    font-weight: 700;
+		    margin: 0;
+		}
+	}
+
+	.banner-img {
+	    float: right;
+	    margin-right: 50px;
+	    margin-top: 10px;
+	    top: 0;
+	}
+}
+
+.logo {
+	margin: 5px;
+	float: left;
+}
+
+.clear {
+	clear: both;
+}
+
+.center {
+	text-align: center;
+}
+
+.titulo {
+	background: $escura;
+	text-align: center;
+	padding: 20px 0;
+
+	h1 {
+		color: $clara;
+	}
+}
+
+.container {
+	width: 960px;
+	margin: auto;
+}
+
+.item {
+	flex: 1;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin: 5px;
+	text-align: center;
+	transition: all 0.5s;
+
+	&:hover {
+		border-color: $escura;
+	}
+	img {
+		width: 160px;
+	}
+	i {
+		font-size: 50px;
+		color: $escura;
+		margin: 20px;
+	}
+}
+
+#destaques {
+	margin-bottom: 20px;
+}
+
+#cardapio {
+	margin-bottom: 20px;
+}
+
+#local {
+	.container {
+		.item {
+			i {
+				color: $branco;
+			}
+			p {
+				color: $branco;
+			}
+		}
+	}
+}
+
+.linha {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#local {
+	background: url("../images/fogo.jpg") fixed no-repeat;
+	padding: 40px 0;
+	float: left;
+	width: 100%;
+	background-size: cover;
+	margin: 20px 0;
+
+	h1 {
+		color: $branco;
+	}
+
+	.item {
+		color: $branco;
+	}
+
+}
+
+#menu {
+	border: 1px solid $escura;
+	color: $escura;
+	padding: 10px;
+	float: right;
+	margin: 20px;
+	display: none;
+}
+
+@media (min-width: 480px) and (max-width: 800px) {
+	nav ul {
+		width: 100%;
+		float: left;
+		background: $branco;
+		display: none;
+
+		li {
+			display: block;
+
+			a {
+				padding: 20px 0;
+				font-size: 20px;
+				float: left;
+				width: 100%;
+			}
+		}
+	}
+	#menu {
+		display: block;
+	}
+	.container {
+		width: 400px;
+	}
+	.banner-msg {
+		width: 350px;
+		padding: 10px;
+	}
+	.banner-img {
+		width: 350px;
+		padding: 10px;
+	}
+}
+
+.promocoes {
+    width: 100%;
+    margin: 20px 0;
+    padding: 40px 0;
+    background: url(../images/bg.jpg) center no-repeat;
+    margin-top: 430px;
+
+    .center {
+    	img {
+    		width: 350px;
+    	}
+    }
+
+    p {
+		color: $preto;
+		font-size: 1.2em;
+    }
+}
+
+.bacon {
+    width: 100%;
+    margin: 0;
+    padding: 40px 0;
+    height: 100px;
+    background: url(../images/bacon.jpg) bottom center;
+    background-size: contain;
+}
+
+#sobre {
+	text-align: center;
+	margin-bottom: 20px;
+
+	.container {
+		p {
+			color: $escura;
+			font-size: 1.2em;
+		}
+	}
+}
+
+#error-page {
+	width: 100%;
+}
+
+footer {
+	width: 100%;
+	background: $bg-footer;
+	padding: 20px 0;
+
+	p {
+		margin-top: 15px !important;
+   		color: $branco;
+   		font-size: 1.1em;
+   	}
+}
